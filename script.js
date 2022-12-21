@@ -21,7 +21,7 @@ let isStarted = false;
 let startButton = document.querySelector('button.start');
 startButton.addEventListener('click', () => {
     if(!isStarted){
-        intervalId = setInterval(increaseTimer,100);
+        intervalId = setInterval(increaseTimer,1000);
         isStarted = true;
     }
 });
