@@ -18,6 +18,7 @@ let intervalId;
 
 let isStarted = false;
 
+// Start timer on clicking the start button
 let startButton = document.querySelector('button.start');
 startButton.addEventListener('click', () => {
     if(!isStarted){
@@ -26,6 +27,7 @@ startButton.addEventListener('click', () => {
     }
 });
 
+// Stop timer on clicking the Stop button
 let stopButton = document.querySelector('button.stop');
 stopButton.addEventListener('click', () => {
     if(isStarted){
@@ -34,6 +36,7 @@ stopButton.addEventListener('click', () => {
     }
 })
 
+// Reset timer on clicking the reset button and set all values to default values
 let resetButton = document.querySelector('button.reset');
 resetButton.addEventListener('click', () => {
     clearInterval(intervalId);
@@ -54,6 +57,7 @@ resetButton.addEventListener('click', () => {
 
 const color = '#D62B83';
 
+//Function to add background according to the time elapsed
 function increaseTimer(){
     if(seconds >= 59){
         seconds = -1;
